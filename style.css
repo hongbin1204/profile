@@ -89,3 +89,6 @@ body {
     filter: blur(30px);
 }
 
+a {
+    color: white;
+}
