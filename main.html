@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div class="container">
+		
+		<div class="msg-container">
+			<div id="slider">
+				<div class="msg-col">
+					<h1>Basic Info</h1>
+					<p><b>Name:</b> Hong Bin Hong (Alvin)</p>
+					<p><b>Degree:</b> Bachelor of Computer Science</p>
+					<p><b>Hobbies:</b> Basketball, Video Games, Coding, Photography</p>
+				</div>
+				<div class="msg-col">
+					<h1>My Hobbies</h1>
+					<p>I have a few hobbies, playing basketball and playing video games are some of my favorites. Coding is also what I like, I usually code when I have nothing to do. I am very interested in software development, such as the technologies and methods used in front-end and back-end development. I wish I could earn more stuff that I’m interested in, right now and in the future.</p>
+				</div>
+				<div class="msg-col">
+					<h1>Games I play</h1>
+					<ul>
+						<p>CS2</p>
+						<p>Valorant</p>
+						<p>Civi 6</p>
+						<p>Mount & Blade II: Bannerlord</p>
+						<p>GTA 6 (Future)</p>
+					</ul>
+				</div>	
+				<div class="msg-col">
+					<h1>My Links</h1>
+					<a href="#"><p>Instagram</p></a>
+					<a href="#"><p>Linkedin</p></a>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="loader">
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const slider = document.getElementById('slider');
+		slider.style.transform = 'translateX(-0%)'
+
+		setInterval(slide, 5000, slider);
+		
+		function slide(slider) {
+			let degree = slider.style.transform;
+			degree = Math.abs(parseInt(degree.split("(")[1].split("%")[0]));
+			if (degree == 75) {
+				degree = 0;
+			} else {
+				degree += 25;
+			}
+			slider.style.transform = `translateX(-${degree}%)`;
+		}
+
+		
+	</script>
+</body>
+
+</html>
